@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2b"><meta name="description" content="View your Luxury Watch orders and payment status.">
+  <title>My Orders — Luxury Watch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head>
+<body class="form-page-body">
+  <header class="site-header"><a class="wordmark" href="index.html#top" aria-label="Luxury Watch home"><svg class="brand-emblem" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><path d="M20 7v3M33 20h-3M20 33v-3M7 20h3M20 12v9l7 4"/><circle class="brand-pin" cx="20" cy="20" r="1.6"/></svg><span class="brand-lockup"><strong>LUXURY WATCH</strong><small>TIMEPIECES · EST. 2025</small></span></a><nav aria-label="Main navigation"><a href="index.html#craft">The craft</a><a href="index.html#collection">Collection</a><a href="contact.html">Contact</a></nav><a class="auth-link" data-auth-link href="login.html">Sign in</a><a class="header-link" href="index.html#collection">Explore watches <span>↗</span></a></header>
+  <main class="form-page order-page"><div class="order-page-inner"><a class="back-link" href="index.html#collection">← Continue exploring</a><p class="eyebrow">PRIVATE CLIENT ACCOUNT</p><h1>My<br><em>orders.</em></h1><p class="form-page-intro" id="orders-message" role="status" aria-live="polite">Loading your orders…</p><div id="orders-list" class="orders-list"></div></div></main>
+  <footer><a class="wordmark" href="index.html#top" aria-label="Luxury Watch home"><svg class="brand-emblem" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><path d="M20 7v3M33 20h-3M20 33v-3M7 20h3M20 12v9l7 4"/><circle class="brand-pin" cx="20" cy="20" r="1.6"/></svg><span class="brand-lockup"><strong>LUXURY WATCH</strong><small>TIMEPIECES · EST. 2025</small></span></a><span>TIME, MINTED.</span><span>© 2026 LUXURY WATCH STUDIO</span></footer>
+  <script type="module" src="auth.js"></script><script type="module" src="orders.js"></script>
+</body>
+</html>

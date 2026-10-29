@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2b"><meta name="description" content="Luxury Watch administration for products and orders.">
+  <title>Store Administration — Luxury Watch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head>
+<body class="form-page-body">
+  <header class="site-header"><a class="wordmark" href="index.html#top" aria-label="Luxury Watch home"><svg class="brand-emblem" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><path d="M20 7v3M33 20h-3M20 33v-3M7 20h3M20 12v9l7 4"/><circle class="brand-pin" cx="20" cy="20" r="1.6"/></svg><span class="brand-lockup"><strong>LUXURY WATCH</strong><small>TIMEPIECES · EST. 2025</small></span></a><nav aria-label="Main navigation"><a href="index.html#collection">Collection</a><a href="orders.html">Orders</a><a href="contact.html">Contact</a></nav><a class="auth-link" data-auth-link href="login.html">Sign in</a><a class="header-link" href="index.html#collection">View store <span>↗</span></a></header>
+  <main class="form-page admin-page"><div class="admin-page-inner">
+    <a class="back-link" href="index.html#top">← Back to store</a>
+    <div class="admin-toolbar"><div><p class="eyebrow">LUXURY WATCH · CONTROL ROOM</p><h1>Store<br><em>admin.</em></h1></div><div class="admin-tabs" role="tablist"><button type="button" data-tab="products" aria-selected="true">Products</button><button type="button" data-tab="orders" aria-selected="false">Orders</button></div></div>
+    <p class="admin-message" id="admin-message" role="status" aria-live="polite">Checking administrator access…</p>
+    <section class="admin-panel" data-admin-panel="products" hidden>
+      <h2>Product catalogue</h2>
+      <form class="admin-product-form" id="product-form">
+        <input type="hidden" name="id">
+        <label>Brand<input name="brand" required maxlength="80" placeholder="Brand"></label>
+        <label>Product name<input name="name" required maxlength="120" placeholder="Model name"></label>
+        <label>Product slug<input name="slug" required maxlength="120" pattern="[a-z0-9-]+" placeholder="brand-model-name"></label>
+        <label>Price (INR)<input name="price" type="number" min="0.01" step="0.01" required placeholder="Price in rupees"></label>
+        <label>Stock quantity<input name="stock_qty" type="number" min="0" step="1" placeholder="Leave blank for unlimited"></label>
+        <label>Image URL<input name="image_url" type="url" required placeholder="https://…"></label>
+        <label class="wide">Description<textarea name="description" maxlength="1000" placeholder="Product details"></textarea></label>
+        <label><span>Visible in store</span><input name="active" type="checkbox" checked></label>
+        <div class="admin-actions"><button class="form-button" type="submit">Save product <span>↗</span></button><button class="secondary-button" type="reset">Clear</button></div>
+      </form>
+      <p class="admin-message" id="product-message" role="status" aria-live="polite"></p>
+      <div id="admin-products" class="admin-products"></div>
+    </section>
+    <section class="admin-panel" data-admin-panel="orders" hidden><h2>Recent orders</h2><p class="admin-message" id="order-message" role="status" aria-live="polite"></p><div id="admin-orders" class="admin-list"></div></section>
+  </div></main>
+  <footer><a class="wordmark" href="index.html#top" aria-label="Luxury Watch home"><svg class="brand-emblem" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><path d="M20 7v3M33 20h-3M20 33v-3M7 20h3M20 12v9l7 4"/><circle class="brand-pin" cx="20" cy="20" r="1.6"/></svg><span class="brand-lockup"><strong>LUXURY WATCH</strong><small>TIMEPIECES · EST. 2025</small></span></a><span>TIME, MINTED.</span><span>© 2026 LUXURY WATCH STUDIO</span></footer>
+  <script type="module" src="auth.js"></script><script type="module" src="admin.js"></script>
+</body>
+</html>
